@@ -1,8 +1,7 @@
 #!/bin/bash
 echo "🚀 Starting LTA Exam Portal DevOps Project..."
 echo "🐳 Building and starting Docker containers..."
-
-docker-compose --env-file .env.local up -d --build
+docker compose --env-file .env.local up -d --build
 
 echo "✅ Project started successfully!"
 echo "🌐 Frontend is running at: http://localhost:3000"
