@@ -1,0 +1,20 @@
+services:
+  exam-backend:
+    container_name: ltaexamportal-backend
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+
+    image: ltaexamportal:v1
+
+    env_file:
+      - /opt/LTA/exam/.env
+
+    network_mode: host
+
+    restart: unless-stopped
+
+    volumes:
+      - ./data:/usr/src/app/data
